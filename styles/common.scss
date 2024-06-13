@@ -1,4 +1,6 @@
-.button, .secondary-button, .primary-button {
+@import "variables";
+
+.button {
   border-width: 0;
   border-radius: 4px;
   padding: 16px;
@@ -10,9 +12,8 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-out;
-}
-@media screen and (min-width: 1280px) {
-  .button, .secondary-button, .primary-button {
+
+  @media screen and (min-width: $screen-m) {
     padding: 18px;
     font-size: 18px;
     line-height: 29px;
@@ -20,20 +21,26 @@
 }
 
 .primary-button {
-  background-color: #244c98;
-  color: #ffffff;
-}
-.primary-button:hover {
-  background-color: #1f4284;
+  @extend .button;
+
+  background-color: $primary;
+  color: $white;
+
+  &:hover {
+    background-color: $blue-500;
+  }
 }
 
 .secondary-button {
-  border: 1px solid #244c98;
-  color: #244c98;
-}
-.secondary-button:hover {
-  border-color: #1f4284;
-  color: #1f4284;
+  @extend .button;
+
+  border: 1px solid $primary;
+  color: $primary;
+
+  &:hover {
+    border-color: $blue-500;
+    color: $blue-500;
+  }
 }
 
 .link-button {
@@ -41,42 +48,39 @@
   font-weight: 500;
   line-height: 27px;
   text-align: left;
-  color: #244c98;
+  color: $primary;
   background: none;
   border: none;
-}
-.link-button:hover {
-  color: #1f4284;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue-500;
+  }
 }
 
 .text-field {
   padding: 24px;
-  background-color: #d7e2f6;
+  background-color: $blue-300;
   border-radius: 10px;
-  color: #1f4284;
+  color: $blue-500;
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
   border-width: 0;
-}
-.text-field::-moz-placeholder {
-  color: #1f4284;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 25px;
-}
-.text-field::placeholder {
-  color: #1f4284;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 25px;
+
+  &::placeholder {
+    color: $blue-500;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 
 .checkbox {
   width: 18px;
   height: 18px;
   margin: 4px;
-  border: 2px solid #323232;
+  border: 2px solid $grey-200;
   cursor: pointer;
 }
 
@@ -84,4 +88,10 @@
   font-size: 18px;
   line-height: 24px;
   cursor: pointer;
-}/*# sourceMappingURL=common.css.map */
+}
+
+.form-error {
+  color: $error;
+  font-size: 13px;
+  line-height: 18px;
+}

@@ -6,15 +6,15 @@
     <meta name="description" content="Test task for Webernetic" />
     <meta name="keywords" content="Test, Webernetic" />
     <meta name="author" content="Yuliya Nalivko" />
-    <link rel="stylesheet" href="scss/styles.css" />
-    <link rel="stylesheet" href="scss/modal.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <script defer src="ts/script.ts"></script>
+    <script defer src="scripts/script.js"></script>
   </head>
   <body>
     <main>
@@ -40,10 +40,10 @@
     </main>
 
     <!-- Modal window -->
-    <div class="modal_container">
+    <div class="modal-container" id="modalContainer">
       <div class="modal">
         <div class="modal_header">
-          <button class="modal_header_close">
+          <button class="modal_header_close" id="closeButton">
             <span class="modal_header_close_icon"></span>
           </button>
         </div>
@@ -51,8 +51,15 @@
           <div class="modal_content_title">Войти в систему</div>
 
           <form name="signInForm" class="modal_content_form" method="post">
-            <input type="text" placeholder="Email/Телефон" />
-            <input type="text" placeholder="Пароль" />
+            <div class="modal_content_form_input">
+              <input type="text" name="emailTel" placeholder="Email/Телефон" />
+              <div id="emailTelError"></div>
+            </div>
+
+            <div class="modal_content_form_input">
+              <input type="text" name="password" placeholder="Пароль" />
+              <div id="passwordError"></div>
+            </div>
 
             <div class="modal_content_form_remember-password">
               <input
@@ -63,17 +70,24 @@
               <label for="rememberPassword">Запомнить пароль</label>
             </div>
 
-            <button class="modal_content_form_restore">Восстановить</button>
+            <button id="restore" class="modal_content_form_restore">
+              Восстановить
+            </button>
 
             <button type="submit" class="modal_content_form_sign-in">
               Войти
             </button>
-            <button class="modal_content_form_sign-up">
+            <button id="signUp" class="modal_content_form_sign-up">
               Зарегистрироваться
             </button>
           </form>
         </div>
       </div>
+    </div>
+
+    <!-- Loading -->
+    <div class="loading-container" id="loadingContainer">
+      <div class="loader"></div>
     </div>
   </body>
 </html>

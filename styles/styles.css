@@ -1,53 +1,53 @@
-.primary-button, .demo_info_button {
+.button, .secondary-button, .primary-button, .demo_info_button {
   border-width: 0;
   border-radius: 4px;
-  background-color: #244c98;
   padding: 16px;
-  color: #ffffff;
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-out;
 }
-.primary-button:hover, .demo_info_button:hover {
-  background-color: #1f4284;
-}
 @media screen and (min-width: 1280px) {
-  .primary-button, .demo_info_button {
+  .button, .secondary-button, .primary-button, .demo_info_button {
     padding: 18px;
-    color: #ffffff;
     font-size: 18px;
     line-height: 29px;
   }
 }
 
-.button {
-  border-width: 0;
-  border-radius: 4px;
+.primary-button, .demo_info_button {
   background-color: #244c98;
-  padding: 16px;
   color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 24px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease-out;
 }
-.button:hover {
+.primary-button:hover, .demo_info_button:hover {
   background-color: #1f4284;
 }
-@media screen and (min-width: 1280px) {
-  .button {
-    padding: 18px;
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 29px;
-  }
+
+.secondary-button {
+  border: 1px solid #244c98;
+  color: #244c98;
+}
+.secondary-button:hover {
+  border-color: #1f4284;
+  color: #1f4284;
+}
+
+.link-button {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  color: #244c98;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.link-button:hover {
+  color: #1f4284;
 }
 
 .text-field {
@@ -85,6 +85,12 @@
   font-size: 18px;
   line-height: 24px;
   cursor: pointer;
+}
+
+.form-error {
+  color: #e72929;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 * {
@@ -244,5 +250,33 @@ main {
   .demo_image {
     height: auto;
     width: 50%;
+  }
+}
+
+.loading-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.loading-container .loader {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  border-bottom-color: transparent;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=styles.css.map */
