@@ -1,0 +1,95 @@
+@import "variables";
+@import "common";
+
+.modal_container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba($black, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 500px;
+  background-color: $blue-100;
+  padding: 24px;
+
+  &_header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &_header_close {
+    background-color: $white;
+    height: 52px;
+    width: 52px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-width: 0;
+    cursor: pointer;
+
+    &_icon {
+      content: url(../images/x.svg);
+    }
+  }
+
+  &_content_title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 24px;
+    color: $text-primary;
+  }
+
+  &_content_form {
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 4px;
+
+      &:last-of-type {
+        margin-bottom: 24px;
+      }
+
+      @extend .text-field;
+    }
+
+    &_remember-password {
+      display: flex;
+      margin-bottom: 24px;
+
+      input[type="checkbox"] {
+        @extend .checkbox;
+
+        margin-right: 17px;
+      }
+
+      label {
+        @extend .label;
+      }
+    }
+
+    &_restore {
+      @extend .link-button;
+
+      margin-bottom: 26px;
+    }
+
+    &_sign-in,
+    &_sign-up {
+      width: 100%;
+    }
+
+    &_sign-in {
+      @extend .primary-button;
+
+      margin-bottom: 4px;
+    }
+
+    &_sign-up {
+      @extend .secondary-button;
+    }
+  }
+}

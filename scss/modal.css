@@ -1,0 +1,150 @@
+.button, .secondary-button, .modal_content_form_sign-up, .primary-button, .modal_content_form_sign-in {
+  border-width: 0;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+}
+@media screen and (min-width: 1280px) {
+  .button, .secondary-button, .modal_content_form_sign-up, .primary-button, .modal_content_form_sign-in {
+    padding: 18px;
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+.primary-button, .modal_content_form_sign-in {
+  background-color: #244c98;
+  color: #ffffff;
+}
+.primary-button:hover, .modal_content_form_sign-in:hover {
+  background-color: #1f4284;
+}
+
+.secondary-button, .modal_content_form_sign-up {
+  border: 1px solid #244c98;
+  color: #244c98;
+}
+.secondary-button:hover, .modal_content_form_sign-up:hover {
+  border-color: #1f4284;
+  color: #1f4284;
+}
+
+.link-button, .modal_content_form_restore {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  color: #244c98;
+  background: none;
+  border: none;
+}
+.link-button:hover, .modal_content_form_restore:hover {
+  color: #1f4284;
+}
+
+.text-field, .modal_content_form input[type=text] {
+  padding: 24px;
+  background-color: #d7e2f6;
+  border-radius: 10px;
+  color: #1f4284;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-width: 0;
+}
+.text-field::-moz-placeholder, .modal_content_form input[type=text]::-moz-placeholder {
+  color: #1f4284;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+}
+.text-field::placeholder, .modal_content_form input[type=text]::placeholder {
+  color: #1f4284;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.checkbox, .modal_content_form_remember-password input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  margin: 4px;
+  border: 2px solid #323232;
+  cursor: pointer;
+}
+
+.label, .modal_content_form_remember-password label {
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.modal_container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 500px;
+  background-color: #f0f4fc;
+  padding: 24px;
+}
+.modal_header {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal_header_close {
+  background-color: #ffffff;
+  height: 52px;
+  width: 52px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-width: 0;
+  cursor: pointer;
+}
+.modal_header_close_icon {
+  content: url(../images/x.svg);
+}
+.modal_content_title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 24px;
+  color: #323232;
+}
+.modal_content_form input[type=text] {
+  width: 100%;
+  margin-bottom: 4px;
+}
+.modal_content_form input[type=text]:last-of-type {
+  margin-bottom: 24px;
+}
+.modal_content_form_remember-password {
+  display: flex;
+  margin-bottom: 24px;
+}
+.modal_content_form_remember-password input[type=checkbox] {
+  margin-right: 17px;
+}
+.modal_content_form_restore {
+  margin-bottom: 26px;
+}
+.modal_content_form_sign-in, .modal_content_form_sign-up {
+  width: 100%;
+}
+.modal_content_form_sign-in {
+  margin-bottom: 4px;
+}/*# sourceMappingURL=modal.css.map */

@@ -96,7 +96,7 @@ main {
   }
 
   &_button {
-    @extend .button;
+    @extend .primary-button;
 
     padding: 10px;
     padding-left: 18px;
@@ -106,7 +106,6 @@ main {
 
     &_icon {
       background-color: $white;
-      display: inline-block;
       height: 44px;
       width: 44px;
       box-sizing: border-box;

@@ -7,13 +7,14 @@
     <meta name="keywords" content="Test, Webernetic" />
     <meta name="author" content="Yuliya Nalivko" />
     <link rel="stylesheet" href="scss/styles.css" />
+    <link rel="stylesheet" href="scss/modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <script defer src="js/script.js"></script>
+    <script defer src="ts/script.ts"></script>
   </head>
   <body>
     <main>
@@ -25,7 +26,11 @@
             не менее 2500 средних и малых проектов. Используя знания и
             накопленный опыт мы можем предложить
           </p>
-          <button class="demo_info_button">
+          <button
+            id="openModalButton"
+            class="demo_info_button"
+            aria-label="Попробовать бесплатно"
+          >
             <span>Попробовать бесплатно</span>
             <span class="demo_info_button_icon"></span>
           </button>
@@ -33,5 +38,42 @@
         <div class="demo_image"></div>
       </section>
     </main>
+
+    <!-- Modal window -->
+    <div class="modal_container">
+      <div class="modal">
+        <div class="modal_header">
+          <button class="modal_header_close">
+            <span class="modal_header_close_icon"></span>
+          </button>
+        </div>
+        <div class="modal_content">
+          <div class="modal_content_title">Войти в систему</div>
+
+          <form name="signInForm" class="modal_content_form" method="post">
+            <input type="text" placeholder="Email/Телефон" />
+            <input type="text" placeholder="Пароль" />
+
+            <div class="modal_content_form_remember-password">
+              <input
+                type="checkbox"
+                id="rememberPassword"
+                name="rememberPassword"
+              />
+              <label for="rememberPassword">Запомнить пароль</label>
+            </div>
+
+            <button class="modal_content_form_restore">Восстановить</button>
+
+            <button type="submit" class="modal_content_form_sign-in">
+              Войти
+            </button>
+            <button class="modal_content_form_sign-up">
+              Зарегистрироваться
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
