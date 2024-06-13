@@ -1,0 +1,154 @@
+@import "variables";
+@import "common.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  padding: 14px 24px;
+
+  @media screen and (min-width: $screen-s) {
+    padding: 24px;
+  }
+
+  @media screen and (min-width: $screen-m) {
+    padding: 36px 40px;
+  }
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media screen and (min-width: $screen-m) {
+    flex-direction: row;
+  }
+}
+
+.demo_info {
+  padding: 24px;
+  padding-bottom: 18px;
+  background-color: $blue-200;
+  width: 100%;
+
+  @media screen and (min-width: $screen-s) {
+    padding-bottom: 24px;
+  }
+
+  @media screen and (min-width: $screen-m) {
+    padding: 72px 102px;
+    width: 50%;
+  }
+
+  &_title {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 27px;
+    color: $blue-500;
+    margin-bottom: 14px;
+
+    @media screen and (min-width: $screen-s) {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 18px;
+    }
+
+    @media screen and (min-width: $screen-m) {
+      font-size: 26px;
+      line-height: 42px;
+      margin-bottom: 18px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      font-size: 30px;
+      line-height: 48px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &_text {
+    font-size: 13px;
+    line-height: 21px;
+    margin-bottom: 18px;
+    color: $text-secondary;
+
+    @media screen and (min-width: $screen-s) {
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: $screen-m) {
+      font-size: 17px;
+      line-height: 27px;
+      margin-bottom: 36px;
+      max-width: 511px;
+    }
+  }
+
+  &_button {
+    @extend .button;
+
+    padding: 10px;
+    padding-left: 18px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    &_icon {
+      background-color: $white;
+      display: inline-block;
+      height: 44px;
+      width: 44px;
+      box-sizing: border-box;
+      padding: 10px;
+      border-radius: 50%;
+      content: url(../images/arrow-up-right.svg);
+      margin-left: 19px;
+
+      @media screen and (max-width: $screen-xs) {
+        margin-left: 10px;
+      }
+
+      @media screen and (min-width: $screen-m) {
+        margin-left: 48px;
+      }
+    }
+
+    @media screen and (max-width: $screen-xs) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $screen-s) {
+      padding: 12px;
+      padding-left: 24px;
+      width: auto;
+    }
+  }
+}
+
+.demo_image {
+  background-image: url(../images/demo-illustration.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 220px;
+
+  @media screen and (min-width: $screen-s) {
+    height: 360px;
+  }
+
+  @media screen and (min-width: $screen-m) {
+    height: auto;
+    width: 50%;
+  }
+}

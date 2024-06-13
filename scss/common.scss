@@ -1,0 +1,27 @@
+@import "variables";
+
+.button {
+  border-width: 0;
+  border-radius: 4px;
+  background-color: $primary;
+  padding: 16px;
+  color: $white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: $blue-500;
+  }
+
+  @media screen and (min-width: $screen-m) {
+    padding: 18px;
+    color: $white;
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
